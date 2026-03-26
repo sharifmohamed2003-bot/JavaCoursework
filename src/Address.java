@@ -1,5 +1,5 @@
 
-public abstract class Address {
+public class Address {
 	private String postcode;
 	private int houseNum;
 	private String city;
@@ -35,5 +35,8 @@ public abstract class Address {
 	}
 	
 	@Override
-	public abstract String toString();
+	public String toString() {
+		return houseNum + " " + postcode + " " + city;
+		
+	}
 }
