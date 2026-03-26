@@ -8,10 +8,14 @@ public class Main {
 		User customer = new User(1, "jsmith", "John Smith", UserType.Customer, address);
 
 		Inventory Inv = new Inventory();
-		Inv.addProduct(new Keyboard(100001, "Logitech", "Black", ConnectivityType.Wireless,
-				49.99, ProductCatagory.Keyboard, Layout.UK, KeyboardTypes.Standard));
-		Inv.addProduct(new Mouse(100002, "Razer", "Black", ConnectivityType.Wired,
-				29.99, ProductCatagory.Mouse, 7, MouseTypes.Gaming));
+		Inv.addProduct(new Keyboard(123123, "Logitech", "Black", ConnectivityType.Wireless,
+				32.00, ProductCatagory.Keyboard, Layout.US, KeyboardTypes.Flexible));
+		Inv.addProduct(new Mouse(112233, "Logitech", "Black", ConnectivityType.Wireless,
+				25.50, ProductCatagory.Mouse, 5, MouseTypes.Gaming));
+		Inv.addProduct(new Keyboard(123456, "Corsair", "Black", ConnectivityType.Wired,
+				39.99, ProductCatagory.Keyboard, Layout.UK, KeyboardTypes.Gaming));
+		Inv.addProduct(new Mouse(345345, "Advent", "Black", ConnectivityType.Wireless,
+				25.50, ProductCatagory.Mouse, 5, MouseTypes.Gaming));
 
 		int choice = 0;
 		while (choice != 3) {
