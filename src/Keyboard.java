@@ -21,8 +21,10 @@ public class Keyboard extends Product{
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+	    return "Barcode: " + getBarcode() + ", Brand: " + getBrand() +
+	           ", Color: " + getColor() + ", Connectivity: " + getConnectivity() +
+	           ", Price: £" + getRetailPrice() + ", Category: " + getCatagory() +
+	           ", Layout: " + layout + ", Type: " + types;
 	}
 
 }

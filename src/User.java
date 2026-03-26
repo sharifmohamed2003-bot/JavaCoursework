@@ -1,17 +1,21 @@
 
-public class User extends Address {
+public class User {
 	
 	private int ID;
 	private String username;
 	private String name;
 	private UserType type;
-
-	public User(String postcode, int houseNum, String city, int ID, String username, String name, UserType type) {
-		super(postcode, houseNum, city);
-		this.ID = ID;
-		this.name = name;
-		this.username = username;
-		this.type = type;
+	private Address address;
+	
+	public User(int ID, String username, String name, UserType type, Address address) {
+        this.ID = ID;
+        this.username = username;
+        this.name = name;
+        this.type = type;
+        this.address = address;
+	}
+	 public Address getAddress() {
+		return this.address;
 	}
 	public int getID() {
 		return this.ID;
@@ -36,8 +40,8 @@ public class User extends Address {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return null;
+	    return "ID: " + ID + ", Name: " + name + ", Username: " + username +
+	           ", Type: " + type + ", Address: " + getAddress();
 	}
 
 }
