@@ -1,7 +1,7 @@
 
 public class Receipt {
 	
-	private String message;
+	private final String message;
 
     public Receipt(String message) {
         this.message = message;

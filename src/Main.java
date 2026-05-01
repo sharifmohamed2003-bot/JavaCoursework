@@ -16,24 +16,27 @@ public class Main {
 				39.99, ProductCatagory.Keyboard, Layout.UK, KeyboardTypes.Gaming));
 		Inv.addProduct(new Mouse(345345, "Advent", "Black", ConnectivityType.Wireless,
 				25.50, ProductCatagory.Mouse, 5, MouseTypes.Gaming));
-
+		
+		System.out.println("Welcome " + customer.getName() + "\n\nplease choose an option:");
+		
+		
 		int choice = 0;
-		while (choice != 3) {
+		while (choice != 3) {//display 3 choices, if choice 3 program ends
 			System.out.println("\n1. View all products");
 			System.out.println("2. Search by barcode");
 			System.out.println("3. Exit");
 			System.out.print("Choice: ");
 			choice = scanner.nextInt();
 
-			if (choice == 1) {
+			if (choice == 1) { //prints all stock
 				for (Product p : Inv.getAllProducts()) {
 					System.out.println(p);
 				}
-			} else if (choice == 2) {
+			} else if (choice == 2) { // search by barcode
 				System.out.print("Enter barcode: ");
 				int barcode = scanner.nextInt();
 				Product result = Inv.findByBarcode(barcode);
-				if (result != null) {
+				if (result != null) {// if code doesnt exist return "not found"
 					System.out.println(result);
 				} else {
 					System.out.println("Product not found");
